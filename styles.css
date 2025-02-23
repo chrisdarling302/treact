@@ -12,12 +12,13 @@ html {
 }
 
 h1 {
-    font-size: 50px;
-    line-height: 1.2;
-    margin-bottom: 32px;
+    font-size: 30px;
+    line-height: 1.25;
+    color: #1a202c;
 }
 
 p {
+    font-size: 18px;
     line-height: 1.5;
 }
 
@@ -33,27 +34,40 @@ section {
     padding: 96px 0;
 }
 
+header {
+    position: relative;
+}
+
+.main {
+    margin-bottom: 96px;
+}
+
 .row {
     width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    
+    max-width: 1200px;
+    margin: 0 auto;  
 }
+
+img {
+    width: 100%;
+}
+
+/*
+
+LANDING
+
+*/
 
 nav {
     height: 80px;
     display: flex;
+    padding-top: 32px;
 
 }
 
-.nav__container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 32px 32px 0 32px;
+.nav__row {
+   display: flex;
+   justify-content: space-between;
 
 }
 
@@ -144,9 +158,9 @@ a:hover {
 
 .btn__menu--close {
     position: fixed;
-    margin-right: 20px;
+    right: 0;
     top: 10px;
-    padding: 8px;
+    padding: 14px;
     font-size: 18px;
     background-color: transparent;
     border: none;
@@ -168,10 +182,10 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 300ms ease;
     visibility: hidden;
     opacity: 0;   
     transform: translateX(300%); 
+    transition: all 300ms ease;
 }
 
 .menu--open .menu__backdrop {
@@ -205,7 +219,7 @@ a:hover {
     color: #1a202c;
     font-weight: 600;
     line-height: 1.5;
-    border-bottom 2px solid transparent;
+    border-bottom: 2px solid transparent;
     
 }
 
@@ -218,13 +232,7 @@ a:hover {
 }
 
 
-.btn__menu--close {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    padding: 8px;
-    color: white;
-}
+
 
 
 /* 
@@ -232,7 +240,7 @@ a:hover {
 HEADER 
 
 */
-
+/*
 .header__container {
     width: 100%;
     max-width: 1280px;
@@ -241,11 +249,16 @@ HEADER
     align-items: center;
     padding: 96px 32px;
 }
+    */
+
+header .row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
 
 .header__description {
     width: 40%;
-    display: flex;
-    flex-direction: column;
     
 }
 
@@ -253,18 +266,17 @@ HEADER
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 60%;
+    width: calc(100%-40%);
     
 }
 
 .header__img {
-    width: 100%;
-    max-width: 750px;
+    max-width: 512px;
 }
 
 .header__description--para {
-    font-size: 18px;
-    padding: 16px 0;
+    font-size: 16px;
+    margin: 20px 0;
 }
 
 .header__email {
@@ -322,7 +334,7 @@ HEADER
 
 .header__customers {
     padding-right: 64px;
-    padding-top: 12px;
+    margin-top: 16px;
     opacity: 50%;
 }
 
@@ -336,13 +348,16 @@ FEATURES
     padding: 96px 0;
 }
 
+#features .row__narrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .row__narrow {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .section__tag {
@@ -370,13 +385,13 @@ FEATURES
     line-height: 1.625;
 }
 
-.services {
+.features {
     display: flex;
     flex-wrap: wrap;
     margin-top: 40px;
 }
 
-.service {
+.feature {
     display: flex;
     width: calc(100% / 3);
 }
@@ -399,12 +414,12 @@ FEATURES
     height: 24px;
 }
 
-.service__text {
+.feature__text {
     margin-top: 8px;
     margin-left: 16px;
 }
 
-.service__para {
+.feature__para {
     margin-top: 16px;
     font-size: 16px;
     color: #7c8ba1;
@@ -418,23 +433,19 @@ QUALITY
 
 */
 
-#quality {
+#quality .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.quality__container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 96px 32px;
+.quality__description,
+.quality__img--wrapper {
+    width: 50%;
 }
 
 .quality__description {
-    width: 50%;
+    max-width: 576px;
     margin-right: 64px;
 }
 
@@ -1096,7 +1107,7 @@ footer {
 
 /* SMALL PHONES, TABLETS, LARGE SMARPHONE */
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
     .nav__links {
         display: none;
     }
@@ -1105,17 +1116,57 @@ footer {
         display: block;
     }
 
-    .header__container {
+    h1 {
+        font-size: 32px;
+    }
+
+    .section__title {
+        font-size: 36px;
+    }
+    
+    header .row {
+        flex-wrap: wrap;
+    }
+   
+    .header__description {
+        text-align: center;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
+
+    .header__description,
+    .header__img--wrapper {
+        width: 100%;
+        max-width: 512px;
+        margin: 0 auto;
+
+    }
+    .features {
+        max-width: 768px;
+       
+   }
+
+    .feature {
+    width: calc(50%);
+}
 
 
 }
 
 /* SMALL PHONES, LARGE SMARTPHONES */
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
+
+    .container {
+        padding: 80px 0;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+
     .nav__links {
         display: none;
     }
@@ -1133,5 +1184,50 @@ footer {
         font-size: 20px;
     }
 
+    .features {
+        justify-content: center;
+    }
+
+    .feature {
+        width: auto;
+        max-width: 384px;
+    }
+
+    .feature__row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #features .section__title, 
+    #pricing .section__title {
+        text-align: center;
+    }
+
+    #quality .row, #values .row {
+        flex-direction: column-reverse;
+    }
+
+    .quality__description, 
+    .quality__img--wrapper, 
+    .steps__description, 
+    .steps__img--wrapper, 
+    .values__description, 
+    .values__img, 
+    .testimonials__description, 
+    .testimonials__img {
+        width: 100%;
+        max-width: 448px;
+    }
+
+    .quality__description, 
+    .steps__description, 
+    .values__description, 
+    .testimonials__description {
+        padding: 0;
+        margin-top: 64px;
+        text-align: center;
+    }
+}
 
 }
