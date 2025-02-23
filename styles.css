@@ -12,7 +12,7 @@ html {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 42px;
     line-height: 1.25;
     color: #1a202c;
 }
@@ -240,16 +240,6 @@ a:hover {
 HEADER 
 
 */
-/*
-.header__container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 96px 32px;
-}
-    */
 
 header .row {
     display: flex;
@@ -490,12 +480,10 @@ STEPS
 
 */
 
-.steps__container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 96px 32px;
+#steps .row {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .steps__img--wrapper {
@@ -554,12 +542,11 @@ VALUES
 
 */
 
-.values__container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 96px 32px;
+#values .row {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
 .values__description {
@@ -567,18 +554,10 @@ VALUES
     padding: 32px 64px 32px 0;
 }
 
-
-.values__img--wrapper {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .values__img {
-    width: 100%;
-
+    width: 50%;
 }
+
 
 .values__list {
     display: flex;
@@ -629,21 +608,35 @@ PRICE PLANS
 
 */
 
+#pricing .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 #pricing {
     padding: 96px 32px;
 }
 
-.pricing__container {
-    padding: 96px 0;
+#pricing .section__para {
+    max-width: 576px;
+    text-align: center;
 }
 
 .plans {
     display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
     margin-bottom: 40px;
+    z-index: 100;
 }
 
 .plan {
-    width: calc(100%/3);
+    width: 100%;
+    max-width: 384px;
     display: flex;
     flex-direction: column;
     margin: 64px 32px 0 0;
@@ -663,7 +656,9 @@ PRICE PLANS
     height: 8px;
 }
 
-.plan__top {
+.plan__top,
+.plan__middle,
+.plan__bottom {
     padding: 32px;
     text-align: center;
 }
@@ -1151,6 +1146,23 @@ footer {
     width: calc(50%);
 }
 
+.values__list {
+    flex-direction: column;
+    max-width: 320px;
+}
+
+.values__img {
+    width: 50%;
+}
+
+.plans {
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan {
+    margin-right: 0px;
+}
 
 }
 
@@ -1199,12 +1211,13 @@ footer {
         text-align: center;
     }
 
-    #features .section__title, 
-    #pricing .section__title {
+    .section__title {
+        font-size: 30px;
         text-align: center;
     }
 
-    #quality .row, #values .row {
+    #quality .row, 
+    #values .row {
         flex-direction: column-reverse;
     }
 
@@ -1228,6 +1241,21 @@ footer {
         margin-top: 64px;
         text-align: center;
     }
-}
+
+    .step {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .values__list {
+        margin: 0 auto;
+    }
+
+    .value__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
 }
