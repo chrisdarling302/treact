@@ -983,7 +983,7 @@ footer {
 }
 
 .footer__columns {
-    margin: -48px;
+    
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -1363,10 +1363,6 @@ footer {
     .start__button:nth-child(2) {
         margin-top: 16px;
         margin-right: 32px;
-    }
-
-    .footer__columns {
-        justify-content: center;
     }
 
     .footer__column {
