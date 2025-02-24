@@ -1191,9 +1191,9 @@ footer {
     margin-top: 24px;
 }
 
-.footer__row  [
+.footer__row  {
     width: 100%;
-]
+}
 
 .footer__columns {
     justify-content: center;
@@ -1362,6 +1362,7 @@ footer {
     }
 
     .testimonials_description {
+        width: 512px;
         padding: 0;
         margin-top: 64px;
         text-align: center;
