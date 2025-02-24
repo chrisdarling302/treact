@@ -982,6 +982,12 @@ footer {
     overflow: hidden;
 }
 
+.footer__row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .footer__columns {
     
     display: flex;
@@ -1172,6 +1178,10 @@ footer {
     width: auto;
     margin-top: 24px;
 }
+
+.footer__row  [
+    width: 100%;
+]
 
 .footer__columns {
     justify-content: center;
