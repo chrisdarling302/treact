@@ -1173,6 +1173,16 @@ footer {
     margin-top: 24px;
 }
 
+.footer__columns {
+    justify-content: center;
+}
+
+.footer__column {
+    width: auto;
+    padding: 0 16px;
+    text-align: center;
+    align-items: center;
+}
 
 }
 
@@ -1380,5 +1390,3 @@ footer {
     }
        
     }
-
-}
