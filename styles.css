@@ -1092,7 +1092,7 @@ footer {
 
 /* SMALL PHONES, TABLETS, LARGE SMARPHONE */
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .nav__links {
         display: none;
     }
