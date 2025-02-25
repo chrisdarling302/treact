@@ -1141,6 +1141,10 @@ footer {
         margin-top: 48px;
     }
 
+    .header__customers {
+        padding: 0;
+    }
+
     .header__description,
     .header__img--wrapper {
         width: 100%;
