@@ -1001,7 +1001,6 @@ footer {
 }
 
 .footer__columns {
-    
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -1292,6 +1291,10 @@ footer {
         flex-direction: column-reverse;
     }
 
+    #quality .row {
+        overflow: hidden;
+    }
+
     .quality__description,
     .quality__img--wrapper, 
     .steps__description, 
@@ -1304,17 +1307,13 @@ footer {
         max-width: 512px;
     }
 
-    .quality__description, 
+    .quality__description,
     .steps__description, 
     .values__description, 
     .testimonials__description {
         padding: 0;
         margin-top: 64px;
         text-align: center;
-    }
-
-    .quality__description {
-        margin: 0 56px;
     }
 
     #steps .row {
@@ -1339,6 +1338,10 @@ footer {
 
     .values__list {
         margin: 0 auto;
+    }
+
+    .value {
+        margin: 32px 0;
     }
 
     .value__title {
@@ -1417,4 +1420,21 @@ footer {
         margin-top: 32px;
     }
        
+    }
+
+    @media (max-width: 550px) {
+
+        .quality__description,
+        .quality__img--wrapper,
+        .testimonials__img,
+        .testimonials_description,
+        .testimonial__bottom {
+            width: 100%;
+            max-width: 350px;
+            margin: 24px 0;
+        }
+
+        .testimonial__details {
+            margin-left: 0;
+        }
     }
